@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS `activity_log` (
   `activity_type` int(4) unsigned NOT NULL,
   `action_group` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `action_id` int(4) DEFAULT NULL,
+  `ip_logged` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_activity_log2` (`user_id`),
   KEY `FK_activity_log1` (`activity_type`)
